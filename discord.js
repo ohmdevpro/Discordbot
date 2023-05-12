@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 
-const client = new Discord.Client();
+const client = new Discord.Client({ intents: [
+  Discord.GatewayIntentBits.Guilds,
+  Discord.GatewayIntentBits.GuildMessages
+]})
 
 const axios = require('axios')
 
